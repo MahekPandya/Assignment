@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 13</title>
+</head>
+
+<body>
+    <script>
+
+        function sum(arr) { 
+                let sum = 0;
+                for (let i = 0; i < arr.length; i++) 
+                    sum += arr[i]; 
+   
+                return sum; 
+        } 
+        let arr = [10, 20, 30, 40];
+        document.write("Sum of given array is " + sum(arr));
+
+        function sum1(arr1) { 
+                let sum1 = 0;
+                let i=0;
+                while(i<arr1.length){
+                    sum1+=arr1[i];
+                    i+=1;
+                }
+        } 
+        let arr1 = [10, 20, 30, 40];
+        document.write("Sum of given array is " + sum1(arr1));
+
+        function sum2(arr2) { 
+                let sum2 = 0;
+                let i=0;
+                do{
+                    sum2+=arr2[i];
+                    i+=1;
+                }while(i<arr2.length)               
+        } 
+        let arr2 = [10, 20, 30, 40];
+        document.write("Sum of given array is " + sum2(arr2));
+
+
+
+        
+    </script>
+</body>
+
+</html>

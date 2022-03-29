@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+
+<body>
+    <script>
+        function getParity(n)
+        {
+            var parity = false;
+            while(n != 0)
+            {
+                parity = !parity;
+                n = n & (n - 1);
+            }
+            return parity;
+        }
+     
+        var n = 10;
+        document.write("Parity of no " + n + " = " + (getParity(n) ? "odd": "even"));
+        
+    </script>
+</body>
+
+</html>
+

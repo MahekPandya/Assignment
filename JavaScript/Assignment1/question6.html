@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = ["Hello", "World", "in", "a", "frame"] ;
+
+        const longestString = strings => {
+            let longest = strings[0].length;
+            strings.forEach(str => {
+                str.length >=  longest ? longest = str.length : longest;
+            });
+            return longest;
+        }
+
+        const createSpacesNeeded = spacesNeeded => {
+            let spaces = '';
+            for(let i = 0; i < spacesNeeded; i++) {
+                if(i < spacesNeeded) {
+                    spaces = spaces + ' ';
+                }
+            }
+            return spaces;
+        }
+
+        const stringsRecFrame = strings => {
+            const longestStr = longestString(strings);  
+            let newLine = '\n';
+            console.log('*********');
+            strings.forEach(str => {
+                if(str.length === longestStr) {
+                    document.write(`*${str}* ${newLine}`);
+                } else {
+                    let spacesNeeded = longestStr - str.length;
+                    let spaces = createSpacesNeeded(spacesNeeded);
+                    document.write(`*${str}${spaces}* ${newLine}`);
+                }
+            });
+            document.write('*********');
+        }
+
+        document.write(stringsRecFrame(arr))
+    </script>
+</body>
+</html>
